@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Sports Engagement Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: #f3f4f6;
+            color: #333;
+        }
+        header {
+            background: linear-gradient(90deg, #0077b6, #00b4d8);
+            padding: 20px 0;
+            text-align: center;
+            color: white;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .section p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #555;
+        }
+        .cards {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card-content h3 {
+            margin: 0 0 10px;
+            font-size: 1.5rem;
+        }
+        .card-content p {
+            font-size: 1rem;
+            color: #555;
+        }
+        .card-content .button {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #00b4d8;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background 0.3s;
+        }
+        .card-content .button:hover {
+            background: #0077b6;
+        }
+        .testimonials {
+            background: #0077b6;
+            color: white;
+            padding: 40px 20px;
+        }
+        .testimonial {
+            margin: 0 auto;
+            max-width: 600px;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .contact-form label {
+            font-weight: 600;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            padding: 10px 20px;
+            background: #00b4d8;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background: #0077b6;
+        }
+
+        /* Registration Page Styles */
+        .registration-form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .registration-form label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        .registration-form input, .registration-form select, .registration-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #bb9457;
+            border-radius: 5px;
+        }
+
+        .registration-form textarea {
+            resize: vertical;
+        }
+
+        #successMessage {
+            display: none;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Community Sports Engagement Platform</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <p>We are dedicated to connecting sports enthusiasts in the community. Whether you're a seasoned athlete or a beginner, our platform brings people together through the love of sports.</p>
+    </section>
+
+    <section id="events" class="section">
+        <h2>Featured Events</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="https://i.ibb.co/zV3LP44/foot.webp" alt="Football">
+                <div class="card-content">
+                    <h3>Football League</h3>
+                    <p>Join our thrilling football league and show off your skills!</p>
+                    <a href="#registration-page" class="button" onclick="showRegistrationPage('Football')">Join Now</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://i.ibb.co/s94B6zT/basket.jpg" alt="Basketball">
+                <div class="card-content">
+                    <h3>Basketball Challenge</h3>
+                    <p>Compete in our exciting basketball tournaments!</p>
+                    <a href="#registration-page" class="button" onclick="showRegistrationPage('Basketball')">Sign Up</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://i.ibb.co/xhmXx54/tenni.jpg" alt="Tennis">
+                <div class="card-content">
+                    <h3>Tennis Tournament</h3>
+                    <p>Show your tennis prowess in this year's big event!</p>
+                    <a href="#registration-page" class="button" onclick="showRegistrationPage('Tennis')">Register</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+        <h2>What Our Members Say</h2>
+        <blockquote class="testimonial">
+            "This platform has completely transformed the way I connect with fellow sports enthusiasts in my community. Highly recommend!" – Sushant Singh.
+        </blockquote>
+    </section>
+
+    <section id="registration-page" class="section" style="display: none;">
+        <h2>Register for Sports</h2>
+        <form id="registrationForm" class="registration-form" action="https://submit-form.com/FHnub9T6u" method="POST">
+            <label for="sport">Select Sport</label>
+            <input type="text" id="sport" name="sport" required readonly>
+
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+
+            <label for="height">Height (in cm)</label>
+            <input type="number" id="height" name="height" placeholder="Your Height"             <input type="number" id="height" name="height" placeholder="Your Height" required>
+
+            <label for="weight">Weight (in kg)</label>
+            <input type="number" id="weight" name="weight" placeholder="Your Weight" required>
+
+            <label for="venue">Venue</label>
+            <input type="text" id="venue" name="venue" placeholder="Event Venue" required>
+
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <button type="submit">Submit</button>
+        </form>
+        <div id="successMessage">Registration successful!</div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="4" placeholder="Your message..." required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Designed By: Sushant Singh</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
